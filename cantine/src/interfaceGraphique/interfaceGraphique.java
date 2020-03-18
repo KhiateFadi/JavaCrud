@@ -5,6 +5,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Label;
 
 public class interfaceGraphique {
 
@@ -45,18 +46,26 @@ public class interfaceGraphique {
 	 */
 	protected void createContents() {
 		shell = new Shell();
-		shell.setSize(499, 350);
+		shell.setSize(475, 345);
 		shell.setText("cantine");
 		
 		Button btnNewButton = new Button(shell, SWT.NONE);
 		btnNewButton.setBounds(209, 224, 75, 25);
-		btnNewButton.setText("New Button");
+		btnNewButton.setText("Valider");
 		
 		text = new Text(shell, SWT.BORDER);
 		text.setBounds(208, 99, 76, 21);
 		
 		text_1 = new Text(shell, SWT.BORDER);
 		text_1.setBounds(208, 162, 76, 21);
+		
+		Label lblNewLabel = new Label(shell, SWT.NONE);
+		lblNewLabel.setBounds(78, 165, 106, 25);
+		lblNewLabel.setText("Mot de passe");
+		
+		Label lblLogin = new Label(shell, SWT.NONE);
+		lblLogin.setBounds(86, 99, 55, 15);
+		lblLogin.setText("Login");
 
 	}
 }
