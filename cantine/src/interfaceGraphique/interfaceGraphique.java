@@ -6,12 +6,15 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 
 public class interfaceGraphique {
 
 	protected Shell shell;
 	private Text text;
 	private Text text_1;
+
 
 	/**
 	 * Launch the application.
@@ -50,8 +53,17 @@ public class interfaceGraphique {
 		shell.setText("cantine");
 		
 		Button btnNewButton = new Button(shell, SWT.NONE);
+		btnNewButton.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				shell.dispose();
+				page2 window = new page2();
+				window.open();
+			}
+		});
 		btnNewButton.setBounds(209, 224, 75, 25);
 		btnNewButton.setText("Valider");
+		
 		
 		text = new Text(shell, SWT.BORDER);
 		text.setBounds(208, 99, 76, 21);
@@ -66,6 +78,11 @@ public class interfaceGraphique {
 		Label lblLogin = new Label(shell, SWT.NONE);
 		lblLogin.setBounds(86, 99, 55, 15);
 		lblLogin.setText("Login");
+		
+		Label lblBienvenue = new Label(shell, SWT.NONE);
+		lblBienvenue.setBounds(218, 41, 55, 15);
+		lblBienvenue.setText("Bienvenue");
 
 	}
+
 }
