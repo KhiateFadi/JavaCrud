@@ -1,14 +1,26 @@
 package interfaceGraphique;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.Statement;
-
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
+import java.awt.EventQueue;
 
+import java.sql.Connection;
+
+import java.sql.DriverManager;
+
+import com.mysql.cj.jdbc.Driver;
+
+import java.sql.Connection;
+
+import java.sql.DriverManager;
+
+import java.sql.SQLException;
+
+import java.sql.SQLException;
+
+import java.sql.*;
+
+import java.util.Calendar;
 public class visualiser_prof {
 
 	protected Shell shell;
