@@ -131,6 +131,14 @@ public class page2 {
 		Button btnValider_3 = new Button(shell, SWT.NONE);
 		btnValider_3.setBounds(381, 55, 75, 25);
 		btnValider_3.setText("valider");
+		btnValider_3.addSelectionListener(new SelectionAdapter() {
+			@Override
+		public void widgetSelected(SelectionEvent e) {
+			shell.dispose();
+			visualiser_prof window = new visualiser_prof();
+			window.open();
+		}
+	});
 
 	}
 }
